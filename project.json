@@ -8,7 +8,7 @@
       "chipFamily": "ESP8266",
       "parts": [
         {
-          "path": "https://raw.githubusercontent.com/Ghostface/BallClock/main/bin/firmware.bin",
+          "path": "https://github.com/WallofClouds/BallClock/raw/refs/heads/main/bin/firmware.bin",
           "offset": 0
         }
       ]
