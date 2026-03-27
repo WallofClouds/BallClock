@@ -22,11 +22,13 @@ static const uint8_t diagToLed[MX_DIAG_H][MX_DIAG_W] = {
 };
 
 int BallMatrix::ledXY(int x, int y) {
+    y = (MX_XY_H - 1) - y;  // инверсия Y
     if (x < 0 || y < 0 || x >= MX_XY_W || y >= MX_XY_H) return -1;
     return ((y & 1) ? 0 : xyToLed[y >> 1][x]) - 1;
 }
 
 int BallMatrix::ledDiag(int x, int y) {
+    y = (MX_DIAG_H - 1) - y;  // инверсия Y
     if (x < 0 || y < 0 || x >= MX_DIAG_W || y >= MX_DIAG_H) return -1;
     return diagToLed[y][x] - 1;
 }
